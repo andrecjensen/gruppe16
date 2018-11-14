@@ -1,0 +1,134 @@
+body {
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+/* ANIMATIONER */
+
+/* SCREEN */
+
+#screen {
+    position: relative;
+    width: 100vw;
+
+    /*    overflow: hidden;*/
+}
+
+/* STARTSKÆRM */
+
+#start {}
+
+#start .ui_elementer {}
+
+#start .start_knap {}
+
+#start .settings_knap {}
+
+#start .figur_elementer {}
+
+#start .figur1 {}
+
+#start .figur2 {}
+
+#start .figur3 {}
+
+/* SETTINGS */
+
+#settings {}
+
+#settings .knapper {}
+
+#settings .toggle_sound {}
+
+#settings .toggle_music {}
+
+#settings .close {}
+
+/* SPILSKÆRM */
+
+#game {
+    /*
+    position: absolute;
+    width: 100%;
+    height: 100%;
+background-image: url(elements/??);
+    background-size: 100%;
+*/
+}
+
+#game .game_background {}
+
+#game .game_elements {}
+
+#game .pige_kjole {}
+
+#game .silhuetter {}
+
+#game .skyer {}
+
+#game .trae {}
+
+#game .telefon {}
+
+#game .blitz {}
+
+#game .fugl {}
+
+
+#game .energy {}
+
+#game .liv1 {}
+
+#game .liv2 {}
+
+#game .liv3 {}
+
+#game .timer {}
+
+#game .loadleader {}
+
+#game .loadprogress {}
+
+#game .loadbar {}
+
+/* GAMEOVER */
+
+#gameover {}
+
+#gameover .gameover_background {}
+
+#gameover .text {}
+
+#gameover .videre_knap {}
+
+#gameover .pigetrist {}
+
+/* FAKTA */
+
+#fakta {}
+
+#fakta .fakta_background {}
+
+#fakta .faktaboks {}
+
+#fakta .elementer {}
+
+#fakta .logo {}
+
+#fakta .pil {}
+
+
+/* ENDSCREEN */
+
+#endcreen {}
+
+#endcreen .end_background {}
+
+#endcreen .text {}
+
+#endcreen .logoknap {}
+
+#endcreen .replay {}
