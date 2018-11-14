@@ -2,11 +2,31 @@ body {
     margin: auto;
 }
 
+/* C
+
 .hide {
     display: none;
 }
 
 /* ANIMATIONER */
+
+.pulse {
+    animation-name: pulse_effekt;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes pulse_effekt {
+    0% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
 
 /* SCREEN */
 
@@ -21,31 +41,31 @@ body {
 
 #start {}
 
-#start .ui_elementer {}
+#ui_elementer {}
 
-#start .start_knap {}
+#start_knap {}
 
-#start .settings_knap {}
+#settings_knap {}
 
-#start .figur_elementer {}
+#figur_elementer {}
 
-#start .figur1 {}
+#figur1 {}
 
-#start .figur2 {}
+#figur2 {}
 
-#start .figur3 {}
+#figur3 {}
 
 /* SETTINGS */
 
 #settings {}
 
-#settings .knapper {}
+#settings_knapper {}
 
-#settings .toggle_sound {}
+#toggle_sound {}
 
-#settings .toggle_music {}
+#toggle_music {}
 
-#settings .close {}
+#close {}
 
 /* SPILSKÆRM */
 
@@ -59,76 +79,79 @@ background-image: url(elements/??);
 */
 }
 
-#game .game_background {}
+#game_background {}
 
-#game .game_elements {}
+#game_elements {}
 
-#game .pige_kjole {}
+#pige_kjole {}
 
-#game .silhuetter {}
+#silhuetter {}
 
-#game .skyer {}
+#skyer {}
 
-#game .trae {}
+#trae {}
 
-#game .telefon {}
+#telefon {}
 
-#game .blitz {}
+#blitz {}
 
-#game .fugl {}
+#fugl {}
 
+/* UI: Energy */
 
-#game .energy {}
+#energy {}
 
-#game .liv1 {}
+#liv1 {}
 
-#game .liv2 {}
+#liv2 {}
 
-#game .liv3 {}
+#liv3 {}
 
-#game .timer {}
+/* UI: Timer */
 
-#game .loadleader {}
+#timer {}
 
-#game .loadprogress {}
+#loadleader {}
 
-#game .loadbar {}
+#loadprogress {}
+
+#loadbar {}
 
 /* GAMEOVER */
 
 #gameover {}
 
-#gameover .gameover_background {}
+#gameover_background {}
 
-#gameover .text {}
+#gameover_text {}
 
-#gameover .videre_knap {}
+#videre_knap {}
 
-#gameover .pigetrist {}
+#pigetrist {}
 
 /* FAKTA */
 
 #fakta {}
 
-#fakta .fakta_background {}
+#fakta_background {}
 
-#fakta .faktaboks {}
+#faktaboks {}
 
-#fakta .elementer {}
+#elementer {}
 
-#fakta .logo {}
+#logo {}
 
-#fakta .pil {}
+#pil {}
 
 
 /* ENDSCREEN */
 
-#endcreen {}
+#endscreen {}
 
-#endcreen .end_background {}
+#end_background {}
 
-#endcreen .text {}
+#endscreen_text {}
 
-#endcreen .logoknap {}
+#logoknap {}
 
-#endcreen .replay {}
+#replay {}
