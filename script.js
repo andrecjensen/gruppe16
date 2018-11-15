@@ -2,6 +2,7 @@ console.log("Spillet som er udarbejdet af Gruppe 16");
 
 window.addEventListener("load", showStart);
 
+// Disse fortæller at værdien på SFX lyde og musik er true. Ved toggle funktionerne
 let showSettingsSFXSound = true;
 let showSettingsMusic = true;
 
@@ -133,35 +134,148 @@ function hideStart() {
 function startStory() {
     console.log("Starter historien");
 
+
+    // if/then herunder fortæller at hvis musik er slået fra, spilles det ikke. Hvis det er slået til, spilles det.
+    if (showSettingsMusic == false) {
+
+        console.log("Musik startes ikke");
+
+
+    } else {
+        console.log("Musik startes");
+        document.querySelector("#music").play();
+    }
+
     // Her skal indsættes forskellige QSE der vælger figure der skal animeres
 
     document.querySelector("#pigekjole").classList.add("pige_animation");
     document.querySelector("#vind").classList.add("vind_animation");
     document.querySelector("#silhuetter").classList.add("silhuetter_animation");
+    document.querySelector("skyer").classList.add("skyer_glide");
+
+    document.querySelector("#pigekjole").addEventListener("animationend", startGame);
 }
 
 function startGame() {
     console.log("Spillet startes");
+
+    // Disse to QSE giver billederne upload classen som får billeder til at flyve mod skyen
+    document.querySelector("privatfoto").classList.add("upload");
+    document.querySelector("godfoto").classList.add("upload");
+
+    // timeout funktionen herunder angiver nedtælling til slut
+    setTimeout(gameOver, 50000);
+
+    // alle gode beskeder/billeder gøres klikbare. Ved klik igangsættes clickGood
+
+    document.querySelector(".godfoto").addEventListener("click", clickGood);
+
+    // alle private billeder gøres klikbare. Ved klik igangsættes clickPrivate
+
+    document.querySelector(".privatfoto").addEventListener("click", clickPrivate);
 }
+
+let liv = 3;
 
 function clickGood() {
     console.log("Klikket på god ting. Der trækkes et liv.");
+
+
+    // Dette if/then afspiller lyd, hvis SFX er slået til.
+    if (showSettingsSFXSound == false) {
+        console.log("Lyd er slået fra = ingen lyd");
+
+    } else {
+        console.log("Mist liv lyd afspilles");
+        document.querySelector("#sfx1").play();
+    }
+
+    // Dette if/then fortæller at der stadig er liv tilbage så fjernes det valgte samt fjerner et liv. Ellers gameover
+    if (liv > 0) {
+
+        // nedenstående vælger det valgte at forsvinde med disappear class
+        console.log(this);
+        this.classList.add("disappear");
+
+        let livstal = "#liv" + liv;
+
+        document.querySelector(livstal).classList.add("hide");
+        console.log("#liv" + liv);
+
+        liv--;
+        console.log(liv);
+    } else {
+        gameOver();
+    }
 }
+
+let counter = 0;
 
 function clickPrivate() {
     console.log("Privat foto stoppet");
+
+    // Dette if/then afspiller lyd, hvis SFX er slået til.
+    if (showSettingsSFXSound == false) {
+        console.log("Lyd er slået fra = ingen lyd");
+
+    } else {
+        console.log("God lyd afspilles");
+        document.querySelector("#sfx2").play();
+    }
+
+    //nedenstående vælger det valgte at forsvinde med disappear class
+    console.log(this);
+    this.classList.add("disappear");
+
+    // Dette siger at antallet af tallet i "counter" skal plusses med 1.
+    counter++;
+
+    //Dette ændrer indholdet af "counter" div'et til det aktuelle tal
+    document.querySelector("#counter").innerHTML = counter;
 }
 
 function gameOver() {
     console.log("Game over");
 
+    // Spilskærmen skjules og stoppes for animation
+    document.querySelector("#game").classList.add("hide");
+    document.querySelector("#game").classList.add("animation_pause");
+    document.querySelector("#gameover").classList.remove("hide");
+
+    // pigen i hjørnet får en kørende animation hvor hun græder
+    document.querySelector("#pigetrist").classList.add("pige_ked");
+
+    // denne knap fører til fakta siden
+    document.querySelector("#videre_knap").addEventListener("click", showFakta);
 }
 
 function showFakta() {
     console.log("Fakta vises");
 
+    // Game over skærm skjules og fakta vises
+    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#gameover").classList.add("animation_pause");
+    document.querySelector("#fakta").classList.remove("hide");
+
+    // ved klik på pil føres man til showEndscreen
+    document.querySelector("#pil").addEventListener("click", showEndscreen);
+
 }
 
 function showEndscreen() {
     console.log("Sidste screen. Link til PrivatSnak.dk");
+
+    // Fakta skærm skjules og endscreen vises
+    document.querySelector("#fakta").classList.add("hide");
+    document.querySelector("#fakta").classList.add("animation_pause");
+    document.querySelector("#endscreen").classList.remove("hide");
+
+    // ved klik på replay startes "startOver"
+    document.querySelector("#replay").addEventListener("click", startOver);
+}
+
+function startOver() {
+    console.log("klik replay");
+
+    window.location.reload(false);
 }
