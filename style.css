@@ -2,7 +2,15 @@ body {
     margin: auto;
 }
 
-/* C
+/* CLASSES */
+
+.animation_pause {
+    animation-play-state: paused;
+}
+
+.blur {
+    filter: blur(5px);
+}
 
 .hide {
     display: none;
@@ -10,6 +18,7 @@ body {
 
 /* ANIMATIONER */
 
+/* Animation til startknap */
 .pulse {
     animation-name: pulse_effekt;
     animation-duration: 1.7s;
@@ -27,6 +36,30 @@ body {
         transform: scale(1.1);
     }
 }
+
+/* Fade animation til at skjule startskærmen ved klik på startknap */
+.hide_start {
+    animation-name: startfade;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes startfade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.pige_animation {}
+
+.vind_aniamtion {}
+
+.silhuetter_animation {}
+
 
 /* SCREEN */
 
@@ -65,7 +98,7 @@ body {
 
 #toggle_music {}
 
-#close {}
+#close_settings {}
 
 /* SPILSKÆRM */
 

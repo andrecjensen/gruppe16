@@ -13,7 +13,7 @@
 
     <div id="screen">
 
-        <div id="start">
+        <div id="start" class="">
             <div id="ui_elementer">
                 <div class="start_knap"></div>
                 <div class="settings_knap"></div>
@@ -27,9 +27,15 @@
 
         <div id="settings" class="hide">
             <div id="knapper">
-                <div id="toggle_sound"></div>
-                <div id="toggle_music"></div>
-                <div id="close"></div>
+                <div id="toggle_sound">
+                    <div class="soundon"></div>
+                    <div class="soundoff"></div>
+                </div>
+                <div id="toggle_music">
+                    <div class="musicon"></div>
+                    <div class="musicoff"></div>
+                </div>
+                <div id="close_settings"></div>
             </div>
 
         </div>
@@ -40,6 +46,7 @@
             <div id="game_elements">
                 <div id="pige_kjole"></div>
                 <div id="silhuetter"></div>
+                <div id="vind"></div>
                 <div id="skyer"></div>
                 <div id="trae"></div>
                 <div id="telefon"></div>
@@ -84,6 +91,11 @@
         </div>
 
     </div>
+
+    <audio src="" id="startsound" class="sfx"></audio>
+    <audio src="" id="sfx2" class="sfx"></audio>
+    <audio src="" id="sfx3" class="sfx"></audio>
+    <audio src="" id="music"></audio>
 
     <script src="script.js"></script>
 
