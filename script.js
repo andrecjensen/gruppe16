@@ -245,29 +245,16 @@ function gameOver() {
     // pigen i hjørnet får en kørende animation hvor hun græder
     document.querySelector("#pigetrist").classList.add("pige_ked");
 
-    // denne knap fører til fakta siden
-    document.querySelector("#videre_knap").addEventListener("click", showFakta);
-}
-
-function showFakta() {
-    console.log("Fakta vises");
-
-    // Game over skærm skjules og fakta vises
-    document.querySelector("#gameover").classList.add("hide");
-    document.querySelector("#gameover").classList.add("animation_pause");
-    document.querySelector("#fakta").classList.remove("hide");
-
-    // ved klik på pil føres man til showEndscreen
-    document.querySelector("#pil").addEventListener("click", showEndscreen);
-
+    // denne knap fører til endscreen siden
+    document.querySelector("#videre_knap").addEventListener("click", showEndscreen);
 }
 
 function showEndscreen() {
     console.log("Sidste screen. Link til PrivatSnak.dk");
 
     // Fakta skærm skjules og endscreen vises
-    document.querySelector("#fakta").classList.add("hide");
-    document.querySelector("#fakta").classList.add("animation_pause");
+    document.querySelector("#gameover").classList.add("hide");
+    document.querySelector("#gameover").classList.add("animation_pause");
     document.querySelector("#endscreen").classList.remove("hide");
 
     // ved klik på replay startes "startOver"

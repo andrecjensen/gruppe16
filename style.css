@@ -75,9 +75,12 @@ body {
 
 #screen {
     position: relative;
+
     width: 100vw;
+    height: 56.25vw;
 
     /*    overflow: hidden;*/
+    /*    cursor: cell;*/
 }
 
 /* STARTSKÆRM */
@@ -113,20 +116,28 @@ body {
 /* SPILSKÆRM */
 
 #game {
-    /*
     position: absolute;
     width: 100%;
     height: 100%;
-background-image: url(elements/??);
+    background-image: url(elements/game/screen/game_background_final.svg);
     background-size: 100%;
-*/
+
+    z-index: 1;
 }
 
 #game_background {}
 
 #game_elements {}
 
-#pige_kjole {}
+#pige_kjole {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-image: url(elements/game/object/pige.svg);
+    background-size: 200% 100%;
+
+    z-index: 3;
+}
 
 #silhuetter {}
 
@@ -174,37 +185,72 @@ background-image: url(elements/??);
 
 #gameover {}
 
-#gameover_background {}
+#gameover_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(elements/end/screen/gameoverscreen.svg);
+    background-size: 100%;
+
+    z-index: 1;
+}
 
 #gameover_text {}
 
-#videre_knap {}
+#videre_knap {
+    position: absolute;
+    width: 30vw;
+    height: 9vw;
+    background-image: url(elements/end/object/videreknap.svg);
+    background-size: 100%;
+
+    left: 52vw;
+    top: 44vw;
+
+    z-index: 1;
+}
 
 #pigetrist {}
-
-/* FAKTA */
-
-#fakta {}
-
-#fakta_background {}
-
-#faktaboks {}
-
-#elementer {}
-
-#logo {}
-
-#pil {}
 
 
 /* ENDSCREEN */
 
 #endscreen {}
 
-#end_background {}
+#end_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(elements/end/screen/endscreen.svg);
+    background-size: 100%;
+
+    z-index: 1;
+}
 
 #endscreen_text {}
 
-#logoknap {}
+#logoknap {
+    position: absolute;
+    width: 25vw;
+    height: 18vw;
+    background-image: url(elements/end/object/ps_logo.svg);
+    background-size: 100%;
 
-#replay {}
+    left: 36vw;
+    top: 36vw;
+
+    z-index: 1;
+}
+
+#replay {
+    position: absolute;
+    width: 16vw;
+    height: 6vw;
+    background-image: url(elements/end/object/replayknap.svg);
+    background-size: 100%;
+
+    left: 5vw;
+    top: 45vw;
+
+    z-index: 1;
+}
