@@ -1,6 +1,6 @@
-console.log("Spillet som er udarbejdet af Gruppe 16");
+console.log("Delbart eller strafbart");
 
-window.addEventListener("load", showStart);
+window.addEventListener("load", sidenVises);
 
 // Disse fortæller at værdien på SFX lyde og musik er true. Ved toggle funktionerne
 let showSettingsSFXSound = true;
@@ -17,13 +17,13 @@ function showStart() {
     // KNAPPER
 
     // Giver Start-knappen en pulse-effekt
-    document.querySelector("#start .start_knap").classList.add("pulse");
+    document.querySelector("#start_knap").classList.add("pulse");
 
     // Ved klik på start-knap føres man videre til spillet
-    document.querySelector("#start .start_knap").addEventListener("click", hideStart);
+    document.querySelector("#start_knap").addEventListener("click", hideStart);
 
     // Ved klik på indstillinger vises indstillinger
-    document.querySelector("#start .settings-knap").addEventListener("click", showSettings);
+    document.querySelector("#settings_knap").addEventListener("click", showSettings);
 }
 
 function showSettings() {
@@ -118,11 +118,8 @@ function musicOn() {
 function hideStart() {
     console.log("Skjuler startskærmen");
 
-    // Denne QSE vælger startlyden og spiller den
-    document.querySelector("#startsound").play();
-
     // Denne QSE vælger startknappen og fjerner dens animation, så ikke spillet bliver for tungt. Man kommer til at se den mens man spiller alligevel.
-    document.querySelector("#start .start_knap").classList.remove("pulse");
+    document.querySelector("#start_knap").classList.remove("pulse");
 
     // Denne QSE starter fade animationen på startskærmen
     document.querySelector("#start").classList.add("hide_start");
@@ -134,6 +131,7 @@ function hideStart() {
 function startStory() {
     console.log("Starter historien");
 
+    document.querySelector("#game").classList.remove("hide");
 
     // if/then herunder fortæller at hvis musik er slået fra, spilles det ikke. Hvis det er slået til, spilles det.
     if (showSettingsMusic == false) {
@@ -148,12 +146,12 @@ function startStory() {
 
     // Her skal indsættes forskellige QSE der vælger figure der skal animeres
 
-    document.querySelector("#pigekjole").classList.add("pige_animation");
+    document.querySelector("#pige_kjole").classList.add("pige_animation");
     document.querySelector("#vind").classList.add("vind_animation");
     document.querySelector("#silhuetter").classList.add("silhuetter_animation");
-    document.querySelector("skyer").classList.add("skyer_glide");
+    document.querySelector("#skyer").classList.add("skyer_glide");
 
-    document.querySelector("#pigekjole").addEventListener("animationend", startGame);
+    document.querySelector("#pige_kjole").addEventListener("animationend", startGame);
 }
 
 function startGame() {
