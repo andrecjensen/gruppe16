@@ -89,6 +89,106 @@ body {
 
     }
 }
+#telefon {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 3.5%;
+    height: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 50.5vw;
+    left: 50.5vw;
+
+    z-index: 2;
+}
+
+#telefon2 {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 2.5%;
+    height: 9%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 52.5vw;
+    left: 59.5vw;
+
+    z-index: 2;
+}
+
+#telefon3 {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 2.5%;
+    height: 9%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 53vw;
+    left: 67.5vw;
+
+    z-index: 2;
+}
+
+#telefon4 {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 3.5%;
+    height: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 49vw;
+    left: 75vw;
+
+    z-index: 2;
+}
+
+#telefon5 {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 2.5%;
+    height: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 50vw;
+    left: 84vw;
+
+    z-index: 2;
+}
+
+#telefon6 {
+    position: absolute;
+    background-image: url(elements/game/object/mobil.svg);
+    width: 2.5%;
+    height: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    top: 50vw;
+    left: 92vw;
+
+    z-index: 2;
+}
+
+#godbesked1 {
+    position: absolute;
+    background-image: url(elements/game/object/ros1.svg);
+}
+
+#godbesked2 {
+    position: absolute;
+
+    background-image: url(elements/game/object/ros2.svg);
+}
+
+#godbesked3 {
+    position: absolute;
+    background-image: url(elements/game/object/ros3.svg);
+}
+
 
 .silhuetter_animation {}
 
@@ -108,8 +208,7 @@ body {
 
     width: 100vw;
     height: 56.25vw;
-
-    /*    overflow: hidden;*/
+overflow: hidden;
     /*    cursor: cell;*/
 }
 
@@ -127,7 +226,7 @@ body {
 
 #pige_blinker {
     animation-name: pige_blinker;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: steps(4);
     position: absolute;
@@ -242,15 +341,53 @@ body {
 
 /* SETTINGS */
 
-#settings {}
+#settings {
+    position: absolute;
+    background-image: url(elements/setting/settings.svg);
+    width: 100vw;
+    height: 56vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 10;
+
+
+}
 
 #settings_knapper {}
 
-#toggle_sound {}
+#toggle_sound {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    background-image: url(elements/setting/toggleknap.svg);
+    background-size: 500% 100%;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 18vw;
+}
 
-#toggle_music {}
+#toggle_music {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    background-image: url(elements/setting/toggleknap.svg);
+    background-size: 500% 100%;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 26vw;
+}
 
-#close_settings {}
+#close_settings {
+    width: 10vw;
+    height: 20vw;
+    position: absolute;
+    background-image: url(elements/setting/Artboard%203.svg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    left: 62vw;
+    top: 8vw;
+}
+
 
 /* SPILSKÆRM */
 
@@ -283,17 +420,19 @@ body {
 
 #silhuetter {
     position: absolute;
-    background-image: url(elements/game/object/);
-    width: 20vw;
-    height: 10vw;
+    background-image: url(elements/game/object/silhuet_sprite.svg);
+    width: 200%;
+    height: 50%;
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 50vw;
-    left: 70vw;
+    top: 31.5vw;
+    left: -49vw;
 
-    z-index: 5;
+    z-index: 3;
 }
+
+
 
 #vind {
     position: absolute;
@@ -392,12 +531,13 @@ body {
 #liv1 {
     position: absolute;
     background-image: url(elements/game/object/batteri-opdateret.svg);
-    width: 100%;
-    height: auto;
-    background-size: 100%;
+    width: 2.5%;
+    height: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     left: 10vw;
-    top: 10vw;
+    top: 1vw;
 
     z-index: 3;
 }
@@ -405,12 +545,13 @@ body {
 #liv2 {
     position: absolute;
     background-image: url(elements/game/object/batteri-opdateret.svg);
-    width: 100%;
-    height: auto;
-    background-size: 100%;
+    width: 2.5%;
+    height: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     left: 15vw;
-    top: 15vw;
+    top: 1vw;
 
     z-index: 3;
 }
@@ -418,15 +559,17 @@ body {
 #liv3 {
     position: absolute;
     background-image: url(elements/game/object/batteri-opdateret.svg);
-    width: 100%;
-    height: auto;
-    background-size: 100%;
+    width: 2.5%;
+    height: 8%;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     left: 20vw;
-    top: 20vw;
+    top: 1vw;
 
     z-index: 3;
 }
+
 
 /* UI: Timer */
 
@@ -514,11 +657,11 @@ body {
 
 @keyframes skyflyver {
     0% {
-        left: 0vw;
+        left: 10vw;
     }
 
     50% {
-        left: 30vw;
+        left: 20vw;
     }
 
     100% {

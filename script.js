@@ -37,6 +37,9 @@ function showSettings() {
     document.querySelector("#toggle_sound").addEventListener("click", toggleSound);
     document.querySelector("#toggle_music").addEventListener("click", toggleMusic);
     document.querySelector("#close_settings").addEventListener("click", hideSettings);
+
+    document.querySelector("#settings").classList.remove("hide");
+    document.querySelector("#settings").classList.add("show");
 }
 
 function hideSettings() {
@@ -158,8 +161,9 @@ function startGame() {
     console.log("Spillet startes");
 
     // Disse to QSE giver billederne upload classen som får billeder til at flyve mod skyen
-    document.querySelector("privatfoto").classList.add("upload");
-    document.querySelector("godfoto").classList.add("upload");
+//    document.querySelector("#privatfoto").classList.add("upload");
+//    document.querySelector("#godfoto").classList.add("upload");
+
 
     // timeout funktionen herunder angiver nedtælling til slut
     setTimeout(gameOver, 50000);
