@@ -89,6 +89,7 @@ body {
 
     }
 }
+
 #telefon {
     position: absolute;
     background-image: url(elements/game/object/mobil.svg);
@@ -173,22 +174,6 @@ body {
     z-index: 2;
 }
 
-#godbesked1 {
-    position: absolute;
-    background-image: url(elements/game/object/ros1.svg);
-}
-
-#godbesked2 {
-    position: absolute;
-
-    background-image: url(elements/game/object/ros2.svg);
-}
-
-#godbesked3 {
-    position: absolute;
-    background-image: url(elements/game/object/ros3.svg);
-}
-
 
 .silhuetter_animation {}
 
@@ -208,7 +193,7 @@ body {
 
     width: 100vw;
     height: 56.25vw;
-overflow: hidden;
+    overflow: hidden;
     /*    cursor: cell;*/
 }
 
@@ -237,6 +222,7 @@ overflow: hidden;
     top: 10vw;
     left: 55vw;
 }
+
 #ui_elementer {}
 
 #start_knap {
@@ -303,6 +289,7 @@ overflow: hidden;
     top: 40vw;
     left: 70vw;
 }
+
 #privatfoto1 {
     position: absolute;
     background-image: url(elements/game/object/privatfoto1.svg);
@@ -313,6 +300,7 @@ overflow: hidden;
     top: 3vw;
     left: 55vw;
 }
+
 #privatfoto2 {
     position: absolute;
     background-image: url(elements/game/object/privatfoto2.svg);
@@ -407,13 +395,13 @@ overflow: hidden;
 
 #pige_kjole {
     position: absolute;
-    width: 45vw;
-    height: 45vw;
+    width: 30vw;
+    height: 30vw;
     background-image: url(elements/game/object/pige_kjole.svg);
     background-size: 400% 100%;
 
-    left: 28vw;
-    top: 10vw;
+    left: 25vw;
+    top: 20vw;
 
     z-index: 3;
 }
@@ -441,8 +429,8 @@ overflow: hidden;
     background-image: url(elements/game/object/wind.svg);
     background-size: 500% 100%;
 
-    top: 30vw;
-    left: 12vw;
+    top: 25vw;
+    left: 5vw;
 
     z-index: 4;
 }
@@ -459,12 +447,12 @@ overflow: hidden;
 #skyer {
     position: absolute;
     width: 100%;
-    height: 20%;
+    height: 25%;
     background-image: url(elements/game/object/sky.svg);
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 0vw;
+    top: 5vw;
     left: 35vw;
 
     z-index: 3;
@@ -477,52 +465,57 @@ overflow: hidden;
     height: 100%;
     background-repeat: no-repeat;
 
-    top: 10vw;
+    top: 13vw;
     left: 70vw;
 
     z-index: 2;
 
 }
 
-#telefon {
-    position: absolute;
-    background-image: url(elements/game/object/);
-    width: 20%;
-    height: 10%;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    top: 20vw;
-    left: 90vw;
-
-    z-index: 2;
-}
-
 #fugl {
     position: absolute;
     background-image: url(elements/game/object/fugl.svg);
-    width: 15%;
-    height: 100%;
+    width: 10%;
+    height: 20%;
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 19vw;
+    top: 22vw;
     left: 74vw;
 
     z-index: 2;
 }
 
-#privatfoto1 {}
+#privatfoto1 {
+    position: absolute;
+    background-image: url(elements/game/object/billede_pige.svg);
+}
 
-#privatfoto2 {}
+#privatfoto2 {
+    position: absolute;
+    background-image: url(elements/game/object/billede_privat1.svg);
+}
 
-#privatfoto3 {}
+#privatfoto3 {
+    position: absolute;
+    background-image: url(elements/game/object/billede_privat2.svg);
+}
 
-#godbesked1 {}
+#godbesked1 {
+    position: absolute;
+    background-image: url(elements/game/object/ros1.svg);
+}
 
-#godbesked2 {}
+#godbesked2 {
+    position: absolute;
 
-#godbesked3 {}
+    background-image: url(elements/game/object/ros2.svg);
+}
+
+#godbesked3 {
+    position: absolute;
+    background-image: url(elements/game/object/ros3.svg);
+}
 
 /* UI: Energy */
 
@@ -668,8 +661,9 @@ overflow: hidden;
         left: 0vw;
     }
 }
+
 @keyframes pige_blinker {
-     0% {
+    0% {
         background-position: 0 0;
     }
 
