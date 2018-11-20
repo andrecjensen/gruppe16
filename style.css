@@ -1,6 +1,6 @@
 body {
     margin: auto;
-    background: red;
+
 }
 
 /* CLASSES */
@@ -94,8 +94,6 @@ body {
 
 .silhuetter_mobil {}
 
-.skyer_glide {}
-
 .upload {}
 
 .disappear {}
@@ -121,12 +119,25 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(elements/start/screen/Titelskaerm_endelig.svg);
+    background-image: url(elements/start/screen/Final_start.svg);
     background-size: 100%;
 
     z-index: 1;
 }
 
+#pige_blinker {
+    animation-name: pige_blinker;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    position: absolute;
+    background-image: url(elements/game/object/pige_blinker.svg);
+    background-size: 400% 100%;
+    height: 40vw;
+    width: 40vw;
+    top: 10vw;
+    left: 55vw;
+}
 #ui_elementer {}
 
 #start_knap {
@@ -157,13 +168,77 @@ body {
     z-index: 2;
 }
 
-#figur_elementer {}
+#billeder {
+    position: relative;
+}
 
-#figur1 {}
+#billede1 {
+    position: absolute;
+    background-image: url(elements/game/object/billede1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 10vw;
+    width: 10vw;
+    top: 8vw;
+    left: 70vw;
+}
 
-#figur2 {}
+#billede2 {
+    position: absolute;
+    background-image: url(elements/game/object/billede_mobil_2%20copy.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    top: 20vw;
+    left: 60vw;
+}
 
-#figur3 {}
+#billede3 {
+    position: absolute;
+    background-image: url(elements/game/object/billede_trae.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 16vw;
+    height: 16vw;
+    top: 40vw;
+    left: 70vw;
+}
+#privatfoto1 {
+    position: absolute;
+    background-image: url(elements/game/object/privatfoto1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 12vw;
+    height: 12vw;
+    top: 3vw;
+    left: 55vw;
+}
+#privatfoto2 {
+    position: absolute;
+    background-image: url(elements/game/object/privatfoto2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 17vw;
+    height: 17vw;
+    top: 24vw;
+    left: 80vw;
+
+    z-index: 8;
+}
+
+#privatfoto3 {
+    position: absolute;
+    background-image: url(elements/game/object/privatfoto3.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 14vw;
+    height: 14vw;
+    top: 35vw;
+    left: 55vw;
+
+
+}
 
 /* SETTINGS */
 
@@ -200,7 +275,7 @@ body {
     background-image: url(elements/game/object/pige_kjole.svg);
     background-size: 400% 100%;
 
-    left: 47vw;
+    left: 28vw;
     top: 10vw;
 
     z-index: 3;
@@ -209,15 +284,15 @@ body {
 #silhuetter {
     position: absolute;
     background-image: url(elements/game/object/);
-    width: 20%;
-    height: 10%;
+    width: 20vw;
+    height: 10vw;
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 20vw;
-    left: 90vw;
+    top: 50vw;
+    left: 70vw;
 
-    z-index: 2;
+    z-index: 5;
 }
 
 #vind {
@@ -227,10 +302,19 @@ body {
     background-image: url(elements/game/object/wind.svg);
     background-size: 500% 100%;
 
-    top: 28vw;
-    left: 35vw;
+    top: 30vw;
+    left: 12vw;
 
     z-index: 4;
+}
+
+.skyflyver {
+    animation-name: skyflyver;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
 }
 
 #skyer {
@@ -241,7 +325,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 5vw;
+    top: 0vw;
     left: 35vw;
 
     z-index: 3;
@@ -254,7 +338,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
 
-    top: 13vw;
+    top: 10vw;
     left: 70vw;
 
     z-index: 2;
@@ -263,7 +347,7 @@ body {
 
 #telefon {
     position: absolute;
-    background-image: url(elements/game/object/mobil.svg);
+    background-image: url(elements/game/object/);
     width: 20%;
     height: 10%;
     background-size: contain;
@@ -283,7 +367,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 
-    top: 22vw;
+    top: 19vw;
     left: 74vw;
 
     z-index: 2;
@@ -426,4 +510,27 @@ body {
     top: 45vw;
 
     z-index: 2;
+}
+
+@keyframes skyflyver {
+    0% {
+        left: 0vw;
+    }
+
+    50% {
+        left: 30vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+}
+@keyframes pige_blinker {
+     0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400%;
+    }
 }
