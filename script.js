@@ -245,7 +245,7 @@ function gameOver() {
     document.querySelector("#gameover").classList.remove("hide");
 
     // pigen i hjørnet får en kørende animation hvor hun græder
-    document.querySelector("#pigetrist").classList.add("pige_ked");
+    document.querySelector("#pigetrist").classList.add("show");
 
     // denne knap fører til endscreen siden
     document.querySelector("#videre_knap").addEventListener("click", showEndscreen);
